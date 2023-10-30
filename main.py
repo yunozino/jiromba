@@ -1,38 +1,37 @@
 #programa que fala estação por numero do mês e dia
+print('Ano 2023')
+dia = int(input('digite um dia\n'))
+mes = int(input('digite um mês\n'))
 
-print = ('qual a estação do ano?')
-dia = int (input('dia:\n'))
-mes = int (input('mes:\n'))
-
-def estacao (mes):
-    if mes in [1,2]:
-        return 'verao'
-    elif mes== 3:
+def EstacaoAno(dia, mes):
+    if mes in (1, 2):
+        return 'VERAO'
+    elif mes == 3:
         if dia < 20:
-            return 'verao'
+            return 'VERAO'
         else:
-            return 'outono'
-    elif mes in [4,5]:
-        return 'outono'
+            return 'OUTONO'
+    elif mes in (4, 5):
+        return 'OUTONO'
     elif mes == 6:
         if dia < 21:
-            return 'outono'
+            return 'OUTONO'
         else:
-            return 'inverno'
-    elif mes in [7,8]:
-        return 'inverno'
+            return 'INVERNO'
+    elif mes in (7, 8):
+        return 'INVERNO'
     elif mes == 9:
         if dia < 23:
-            return 'inverno'
-    else:
-        return 'primavera'
-    elif mes in {10, 11}:
-        return 'primavera'
-    elif 12 == mes:
-        if 22 > dia:
-            return 'primavera'
-    else:
-        return 'verao'
+            return 'INVERNO'
+        else:
+            return 'PRIMAVERA'
+    elif mes in (10, 11):
+        return 'PRIMAVERA'
+    elif mes == 12:
+        if dia < 22:
+            return 'PRIMAVERA'
+        else:
+            return 'VERAO'
 
-resul = estacao(dia, mes)
-print(resul)
+resultado = EstacaoAno(dia, mes)
+print(resultado)
