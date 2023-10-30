@@ -26,13 +26,13 @@ def estacao (mes):
             return 'inverno'
     else:
         return 'primavera'
-    elif mes in (10,11):
+    elif mes in [10, 11]:
         return 'primavera'
-    elif mes 12:
-        if dia <  22:
+    elif mes == 12:
+        if dia < 22:
             return 'primavera'
     else:
         return 'verao'
 
-    resul: estacao (dia, mes)
-    print(resul)
+resul = estacao(dia, mes)
+print(resul)
